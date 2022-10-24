@@ -1,0 +1,41 @@
+/*
+Filename: app.css
+Student's name: Viet Nguyen Hoang
+StudentID: 301228010
+Date: 09/28/2022
+*/
+
+
+/* Home/Index page start */
+#welcome_msg {
+    text-align: center;
+}
+#mission_statement{
+    text-align: center;
+}
+/* Home/Index page end*/
+
+/* About page start */
+#name{
+    text-align: center;
+}
+#resume_file{
+    text-align: center;
+}
+/* About page end */
+
+/* Projects page start */
+#title{
+    text-align: center;
+    font-weight: bold;
+}
+.projectTitle{
+    padding-top: 20px;
+}
+/* Projects page end */
+
+/* Services page start */
+input, label{
+    width: 90%;
+}
+/* Services page end */
