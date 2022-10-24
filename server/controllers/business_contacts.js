@@ -12,7 +12,7 @@ module.exports.displayBusinessContactsList = (req, res, next) => {
             return console.error(err);
         }
         else {
-            //console.log(BookList);
+
 
             res.render('business_contacts/list',
                 {
@@ -32,20 +32,20 @@ module.exports.displayAddPage = (req, res, next) => {
 }
 
 module.exports.processAddPage = (req, res, next) => {
-    let newBook = BusinessContacts({
+    let newContact = BusinessContacts({
         "contact_name": req.body.contact_name,
         "contact_number": req.body.contact_number,
         "contact_email": req.body.contact_email,
     });
 
-    Book.create(newBook, (err, Book) => {
+    BusinessContacts.create(newContact, (err, Contact) => {
         if (err) {
             console.log(err);
             res.end(err);
         }
         else {
-            // refresh the book list
-            res.redirect('/book-list');
+            // refresh the contact list
+            res.redirect('/business-contacts-list');
         }
     });
 
@@ -54,15 +54,15 @@ module.exports.processAddPage = (req, res, next) => {
 module.exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
 
-    Book.findById(id, (err, bookToEdit) => {
+    BusinessContacts.findById(id, (err, contactToEdit) => {
         if (err) {
             console.log(err);
             res.end(err);
         }
         else {
             //show the edit view
-            res.render('book/edit', {
-                title: 'Edit Book', book: bookToEdit,
+            res.render('business_contacts/edit', {
+                title: 'Edit Contact', contact: contactToEdit,
                 displayName: req.user ? req.user.displayName : ''
             })
         }
@@ -72,23 +72,21 @@ module.exports.displayEditPage = (req, res, next) => {
 module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id
 
-    let updatedBook = Book({
+    let updatedContact = BusinessContacts({
         "_id": id,
-        "name": req.body.name,
-        "author": req.body.author,
-        "published": req.body.published,
-        "description": req.body.description,
-        "price": req.body.price
+        "contact_name": req.body.contact_name,
+        "contact_number": req.body.contact_number,
+        "contact_email": req.body.contact_email,
     });
 
-    Book.updateOne({ _id: id }, updatedBook, (err) => {
+    BusinessContacts.updateOne({ _id: id }, updatedContact, (err) => {
         if (err) {
             console.log(err);
             res.end(err);
         }
         else {
             // refresh the book list
-            res.redirect('/book-list');
+            res.redirect('/business-contacts-list');
         }
     });
 }
@@ -96,14 +94,14 @@ module.exports.processEditPage = (req, res, next) => {
 module.exports.performDelete = (req, res, next) => {
     let id = req.params.id;
 
-    Book.remove({ _id: id }, (err) => {
+    BusinessContacts.remove({ _id: id }, (err) => {
         if (err) {
             console.log(err);
             res.end(err);
         }
         else {
             // refresh the book list
-            res.redirect('/book-list');
+            res.redirect('/business-contacts-list');
         }
     });
 }
