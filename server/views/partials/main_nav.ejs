@@ -1,6 +1,6 @@
 <!-- Main Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/">COMP229</a>
+  <a class="navbar-brand" href="/"><i class="fas fa-torii-gate"></i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
           <% } else { %>
         <li class="nav-item">
           <% } %>
-            <a class="nav-link" href="/home"><i class="fas fa-lg fa-laptop-house"></i> Home </a>
+            <a class="nav-link" href="/home"><i class="fas fa-home"></i> Home </a>
         </li>
 
         <% if (title=="About" ) { %>
@@ -22,7 +22,7 @@
             <% } else { %>
           <li class="nav-item">
             <% } %>
-              <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i> About </a>
+              <a class="nav-link" href="/about"><i class="fas fa-info"></i> About </a>
           </li>
 
           <% if (title=="Products" ) { %>
@@ -30,7 +30,7 @@
               <% } else { %>
             <li class="nav-item">
               <% } %>
-                <a class="nav-link" href="/projects"><i class="fab fa-elementor"></i> Products </a>
+                <a class="nav-link" href="/projects"><i class="fas fa-list"></i> Products </a>
             </li>
 
             <% if (title=="Services" ) { %>
