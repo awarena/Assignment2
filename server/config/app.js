@@ -69,7 +69,7 @@ let User = userModel.User;
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-
+passport.use(User.createStrategy());
 // routing
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
