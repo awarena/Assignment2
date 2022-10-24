@@ -20,15 +20,15 @@
                                 <!-- Header Row-->
                                 <tr class="d-flex">
                                     <% if(typeof displayName=='string' && displayName) { %>
-                                        <th class="text-center col-2">Name</th>
-                                        <th class="text-center col-2">Number</th>
-                                        <th class="text-center col-1">Email Address</th>
+                                        <th class="text-center col-3">Name</th>
+                                        <th class="text-center col-3">Number</th>
+                                        <th class="text-center col-4">Email Address</th>
                                         <th class="text-center col-1"></th>
                                         <th class="text-center col-1"></th>
                                         <% } else { %>
-                                            <th class="text-center col-2">Name</th>
-                                            <th class="text-center col-2">Number</th>
-                                            <th class="text-center col-1">Email Address</th>
+                                            <th class="text-center col-3">Name</th>
+                                            <th class="text-center col-3">Number</th>
+                                            <th class="text-center col-6">Email Address</th>
                                             <% } %>
                                 </tr>
 
@@ -37,13 +37,13 @@
                                 <% for(let count=0; count < BusinessContactsList.length; count++) { %>
                                     <tr class="d-flex">
                                         <% if(typeof displayName=='string' && displayName) { %>
-                                            <td class="text-center col-2">
+                                            <td class="text-center col-3">
                                                 <%= BusinessContactsList[count].contact_name %>
                                             </td>
-                                            <td class="text-center col-2">
+                                            <td class="text-center col-3">
                                                 <%= BusinessContactsList[count].contact_number %>
                                             </td>
-                                            <td class="text-center col-1">
+                                            <td class="text-center col-4">
                                                 <%= BusinessContactsList[count].contact_email %>
                                             </td>
                                             <td class="text-center col-1">
@@ -57,13 +57,13 @@
                                                     <i class="fas fa-trash-alt"></i> Delete</a>
                                             </td>
                                             <% } else { %>
-                                                <td class="text-center col-2">
+                                                <td class="text-center col-3">
                                                     <%= BusinessContactsList[count].contact_name %>
                                                 </td>
-                                                <td class="text-center col-2">
+                                                <td class="text-center col-3">
                                                     <%= BusinessContactsList[count].contact_number %>
                                                 </td>
-                                                <td class="text-center col-1">
+                                                <td class="text-center col-6">
                                                     <%= BusinessContactsList[count].contact_email %>
                                                 </td>
                                                 <% } %>
