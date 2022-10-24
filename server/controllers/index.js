@@ -28,6 +28,10 @@ module.exports.displayContactPage = (req, res, next) => {
     res.render('contact', { title: 'Contact', displayName: req.user ? req.user.displayName : '' });
 }
 
+module.exports.processContactPage = (req, res, next) => {
+    res.redirect('/');
+}
+
 module.exports.displayLoginPage = (req, res, next) => {
     // check if the user is already logged in
     if (!req.user) {
