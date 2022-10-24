@@ -21,7 +21,7 @@ module.exports.displayBusinessContactsList = (req, res, next) => {
                     displayName: req.user ? req.user.displayName : ''
                 });
         }
-    });
+    }).sort({ 'contact_name': 1 });
 }
 
 module.exports.displayAddPage = (req, res, next) => {
