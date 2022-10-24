@@ -1,1 +1,1 @@
-This is the version control for Assignment 01, COMP229
+This is the version control for Assignment 02, COMP229
