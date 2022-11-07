@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 // Github test
+//  test protection rules
 /**
  * Module dependencies.
  */
